@@ -572,5 +572,39 @@
     });
   });
 </script>
+<!-- Floating Audio Player -->
+<div id="audioPlayer" style="position:fixed;bottom:24px;right:24px;background:#fff;border:1px solid #eee;border-radius:12px;padding:12px 16px;display:flex;align-items:center;gap:12px;box-shadow:0 4px 20px rgba(0,0,0,0.08);z-index:9999;width:260px;">
+  <button onclick="togglePlay()" id="playBtn" style="width:36px;height:36px;border-radius:50%;background:#e8f0fe;border:none;cursor:pointer;font-size:16px;">▶</button>
+  <div style="flex:1;">
+    <div style="font-size:13px;font-weight:600;">Corporate Ambient</div>
+    <div id="statusLabel" style="font-size:11px;color:#999;">Muted · click 🔊 to unmute</div>
+  </div>
+  <span onclick="toggleMute()" style="cursor:pointer;font-size:18px;" id="volBtn">🔇</span>
+</div>
+
+<audio id="bgAudio" loop>
+  <source src="https://pixabay.com/music/corporate-corporate-background-music-483403/" type="audio/mpeg">
+</audio>
+
+<script>
+  let muted = true;
+  const audio = document.getElementById('bgAudio');
+  audio.volume = 0.3;
+  audio.muted = true;
+
+  function togglePlay() {
+    if (audio.paused) { audio.play(); document.getElementById('playBtn').textContent = '⏸'; }
+    else { audio.pause(); document.getElementById('playBtn').textContent = '▶'; }
+  }
+  function toggleMute() {
+    muted = !muted;
+    audio.muted = muted;
+    document.getElementById('volBtn').textContent = muted ? '🔇' : '🔊';
+    document.getElementById('statusLabel').textContent = muted ? 'Muted · click 🔊 to unmute' : 'Now playing';
+    if (audio.paused && !muted) { audio.play(); document.getElementById('playBtn').textContent = '⏸'; }
+  }
+
+  window.addEventListener('load', () => { audio.play().catch(() => {}); });
+</script>
 </body>
 </html>
