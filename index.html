@@ -617,15 +617,25 @@ function toggleMute() {
 }
 
 // Smooth volume change function
-function setVolumeSmooth(target) {
-  let step = (target - audio.volume) / 20;
-  let interval = setInterval(() => {
-    audio.volume += step;
-    if (Math.abs(audio.volume - target) < 0.01) {
-      audio.volume = target;
-      clearInterval(interval);
+function fadeInAudio() {
+  audio.volume = 0;
+  let fade = setInterval(() => {
+    if (audio.volume < 0.3) {
+      audio.volume += 0.02;
+    } else {
+      clearInterval(fade);
     }
-  }, 50);
+  }, 100);
+}
+
+function toggleMute() {
+  audio.muted = !audio.muted;
+  control.textContent = audio.muted ? '🔇' : '🔊';
+
+  if (!audio.muted) {
+    audio.play().catch(()=>{});
+    fadeInAudio();
+  }
 }
 
 // Scroll-based intelligence (Power BI feel)
