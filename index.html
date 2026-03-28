@@ -58,6 +58,7 @@
   }
 }
 </script>
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
@@ -215,7 +216,7 @@
   footer { background:#060402; padding:2rem 4rem; display:flex; justify-content:space-between; align-items:center; border-top:1px solid rgba(255,255,255,.05); flex-wrap:wrap; gap:1rem; }
   .fbrand { font-family:"Bebas Neue",sans-serif; font-size:1.1rem; letter-spacing:.08em; color:rgba(255,255,255,.3); }
   .fbrand span { color:var(--red-light); }
-  footer p { font-family:var(--mono); font-size:.72rem; color:rgba(255,255,255,.2); letter-spacing:.06em; }
+  footer p { font-family:var(--mono); font-size:.72rem; color:rgb(254, 254, 254); letter-spacing:.06em; }
   .flinks { display:flex; gap:1.5rem; }
   .flinks a { font-family:var(--mono); font-size:.72rem; color:rgba(255,255,255,.25); text-decoration:none; text-transform:uppercase; letter-spacing:.08em; transition:color .2s; }
   .flinks a:hover { color:var(--red-light); }
@@ -237,8 +238,145 @@
     .fbrand,.flinks{display:none;}
     .form-row{grid-template-columns:1fr;}
     .stack{padding:4rem 1.5rem;}
+    .ai-grid {
+    grid-template-columns: 1fr;
+}
   }
   @media(max-width:500px){.gallery-grid{grid-template-columns:1fr;}}
+  /* AI MCP SECTION */
+.ai-mcp {
+  background: #0A0806;
+}
+
+.ai-mcp h2 {
+  margin-bottom: 2rem;
+  line-height: 1.2;        /* adds vertical spacing */
+  letter-spacing: 0.02em;  /* improves readability */
+}
+
+.ai-mcp .stag {
+  color: rgba(201,58,8,0.75); /* softer red instead of bright */
+}
+
+.ai-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.ai-card {
+  background: rgba(255,255,255,.02);
+  padding: 2rem;
+  border: 1px solid rgba(255,255,255,.06);
+  transition: all .3s;
+}
+
+.ai-card:hover {
+  background: rgba(170,44,4,.08);
+  border-color: rgba(201,58,8,.4);
+  transform: translateY(-4px);
+  box-shadow: 0 12px 30px rgba(201,58,8,0.15);
+}
+
+.ai-card h3 {
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 1.4rem;
+  color: rgba(255,255,255,0.85); /* softer white */
+  margin-bottom: .6rem;
+  letter-spacing: 0.04em;
+}
+
+.ai-card p {
+  font-size: .9rem;
+  color: var(--gray);
+  line-height: 1.7;
+}
+
+.ai-demo {
+  background: #F5F0EA; /* same as your cream theme */
+  text-align: center;
+}
+
+.ai-demo h2 {
+  color: var(--black);
+}
+
+.ai-demo .stag {
+  color: var(--red);
+}
+
+.ai-demo-box {
+  margin-top: 2rem;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.ai-demo-box input {
+   width: 70%;
+  padding: 1rem;
+  border: 1px solid rgba(0,0,0,.2);
+  background: #ffffff;
+  color: #000;
+}
+
+.ai-demo-box input:focus {
+  border-color: var(--red-light);
+  box-shadow: 0 0 0 2px rgba(201,58,8,0.2);
+}
+
+.ai-demo-box button {
+  padding: 1rem 1.5rem;
+  background: var(--red-light);
+  border: none;
+  color: #fff;
+  cursor: pointer;
+}
+
+.ai-output {
+  margin-top: 1.5rem;
+  padding: 1.2rem;
+  background: #ffffff;
+  border: 1px solid rgba(0,0,0,.1);
+  text-align: left;
+  font-family: var(--mono);
+  font-size: .85rem;
+  color: #3A3530;
+}
+
+.case-study {
+  background: var(--cream);
+}
+
+.case-study h2 {
+  color: var(--black);
+}
+
+.case-box {
+  margin-top: 2rem;
+  max-width: 800px;
+}
+
+.case-box p {
+  color: #3A3530;
+}
+
+.case-box ul {
+  margin-top: 1rem;
+  padding-left: 1.2rem;
+}
+
+.case-box li {
+  margin-bottom: .6rem;
+  color: #3A3530;
+}
+
+.impact {
+  margin-top: 1.5rem;
+  font-weight: 600;
+  color: var(--red);
+}
 </style>
 </head>
 <body>
@@ -259,7 +397,7 @@
 <section class="hero" id="home">
   <div class="hero-bg"></div>
   <div class="hero-grid"></div>
-  <p class="hero-tag">Senior Data &amp; BI Specialist &middot; Karachi, PK &middot; 12+ Years</p>
+  <p class="hero-tag">Senior Data &amp; BI Specialist &middot; Karachi, PK &middot; 26+ Years</p>
   <h1>Turning Raw<br>Data Into<br><em>Decisions.</em></h1>
   <p class="hero-sub">I build enterprise Power BI dashboards, SSIS pipelines, and SQL Server data warehouses that help organisations stop guessing and start knowing.</p>
   <div class="hero-cta">
@@ -271,10 +409,10 @@
 
 <!-- STATS -->
 <div class="stats">
-  <div class="stat"><div class="stat-n" style="color:#FFFFFF!important">12+</div><div class="stat-l" style="color:#FFFFFF!important">Years of<br>Experience</div></div>
+  <div class="stat"><div class="stat-n" style="color:#FFFFFF!important">26+</div><div class="stat-l" style="color:#FFFFFF!important">Years of<br>Experience</div></div>
   <div class="stat"><div class="stat-n" style="color:#FFFFFF!important">50+</div><div class="stat-l" style="color:#FFFFFF!important">Dashboards<br>Delivered</div></div>
   <div class="stat"><div class="stat-n" style="color:#FFFFFF!important">5</div><div class="stat-l" style="color:#FFFFFF!important">Industries<br>Served</div></div>
-  <div class="stat"><div class="stat-n" style="color:#FFFFFF!important">3</div><div class="stat-l" style="color:#FFFFFF!important">Countries<br>Worked In</div></div>
+  <div class="stat"><div class="stat-n" style="color:#FFFFFF!important">2</div><div class="stat-l" style="color:#FFFFFF!important">Countries<br>Worked In</div></div>
 </div>
 
 <!-- ABOUT -->
@@ -284,19 +422,69 @@
   <div class="about-grid">
     <div class="about-text">
       <p>I'm <strong>Syed Najamuddin</strong>, but you can just call me Syed.</p>
-      <p>Originally from Karachi, PK &mdash; for the last <strong>12+ years</strong> I've been sharpening my skills in Power BI, data engineering, ETL automation, SQL Server, and business intelligence solutions across cloud and on-premise environments.</p>
+      <p>Originally from Karachi, PK &mdash; for the last <strong>26+ years</strong> I've been sharpening my skills in Power BI, data engineering, ETL automation, SQL Server, and business intelligence solutions across cloud and on-premise environments.</p>
       <p>I strive to create <strong>elegant, scalable analytics platforms</strong> that translate complex business data into clear executive decisions &mdash; balancing governance, performance, and usability.</p>
       <p>I've delivered data solutions for <strong>banking, automotive, healthcare, and retail</strong> organisations spanning multiple countries and enterprise-grade environments.</p>
       <a href="#contact" class="lets-talk">Have an interesting project? Let's talk &rarr;</a>
     </div>
     <div class="skills">
-      <div class="skill-row"><div class="skill-hd"><span>Power BI &amp; DAX</span><span>95%</span></div><div class="skill-bar"><div class="skill-fill" data-w="95"></div></div></div>
-      <div class="skill-row"><div class="skill-hd"><span>SSIS &amp; ETL Pipelines</span><span>90%</span></div><div class="skill-bar"><div class="skill-fill" data-w="90"></div></div></div>
-      <div class="skill-row"><div class="skill-hd"><span>SQL Server &amp; Data Modeling</span><span>92%</span></div><div class="skill-bar"><div class="skill-fill" data-w="92"></div></div></div>
-      <div class="skill-row"><div class="skill-hd"><span>Data Warehousing</span><span>88%</span></div><div class="skill-bar"><div class="skill-fill" data-w="88"></div></div></div>
-      <div class="skill-row"><div class="skill-hd"><span>Python ETL Automation</span><span>75%</span></div><div class="skill-bar"><div class="skill-fill" data-w="75"></div></div></div>
-      <div class="skill-row"><div class="skill-hd"><span>Power Platform</span><span>85%</span></div><div class="skill-bar"><div class="skill-fill" data-w="85"></div></div></div>
+      <div class="skill-row"><div class="skill-hd"><span>Power BI &amp; DAX &amp; Data Modeling</span><span>95%</span></div><div class="skill-bar"><div class="skill-fill" data-w="95"></div></div></div>
+      <div class="skill-row"><div class="skill-hd"><span>SSIS &amp; ETL Pipelines</span><span>80%</span></div><div class="skill-bar"><div class="skill-fill" data-w="90"></div></div></div>
+      <div class="skill-row"><div class="skill-hd"><span>SQL Server </span><span>55%</span></div><div class="skill-bar"><div class="skill-fill" data-w="92"></div></div></div>
+      <div class="skill-row"><div class="skill-hd"><span>Data Warehousing</span><span>55%</span></div><div class="skill-bar"><div class="skill-fill" data-w="88"></div></div></div>
+      <div class="skill-row"><div class="skill-hd"><span>Python ETL Automation</span><span>35%</span></div><div class="skill-bar"><div class="skill-fill" data-w="75"></div></div></div>
+      <div class="skill-row"><div class="skill-hd"><span>Power BI Report Server</span><span>95%</span></div><div class="skill-bar"><div class="skill-fill" data-w="85"></div></div></div>
+      <div class="skill-row"><div class="skill-hd"><span>Power MCP Server</span><span>65%</span></div><div class="skill-bar"><div class="skill-fill" data-w="85"></div></div></div>
+      <div class="skill-row"><div class="skill-hd"><span>Claude AI &amp; ChatGPT</span><span>85%</span></div><div class="skill-bar"><div class="skill-fill" data-w="85"></div></div></div>
+      <div class="skill-row"><div class="skill-hd"><span>SharePoint &amp; Power Platform </span><span>55%</span></div><div class="skill-bar"><div class="skill-fill" data-w="85"></div></div></div>
     </div>
+  </div>
+</section>
+<section class="ai-mcp">
+  <p class="stag">// AI + MCP Powered Analytics</p>
+  <h2>Next-Gen BI with<br>AI & Automation.</h2>
+
+  <div class="ai-grid">
+
+    <div class="ai-card">
+      <h3>Power BI MCP Server Integration</h3>
+      <p>
+        Enabling AI-driven analytics by connecting Power BI datasets with MCP Server and LLMs like Claude — allowing natural language querying, smart insights, and automated decision support.
+      </p>
+    </div>
+
+    <div class="ai-card">
+      <h3>AI-Powered Data Exploration</h3>
+      <p>
+        Users can search business data using plain English — no SQL or DAX required. AI translates queries into actionable insights instantly.
+      </p>
+    </div>
+
+    <div class="ai-card">
+      <h3>Automated Insights & Alerts</h3>
+      <p>
+        Intelligent systems monitor KPIs and trigger alerts, summaries, and recommendations using AI — reducing manual reporting effort.
+      </p>
+    </div>
+
+    <div class="ai-card">
+      <h3>Enterprise-Ready Architecture</h3>
+      <p>
+        Secure integration with SQL Server, SSIS pipelines, and Power BI Report Server — keeping sensitive banking data fully on-premise.
+      </p>
+    </div>
+
+  </div>
+</section>
+<section class="ai-demo">
+  <p class="stag">// Live AI Experience</p>
+  <h2>Ask Your Data.</h2>
+
+  <div class="ai-demo-box">
+    <input type="text" id="aiInput" placeholder="e.g. Show me ATM downtime in last 7 days" />
+    <button onclick="runAI()">Ask AI</button>
+
+    <div id="aiOutput" class="ai-output"></div>
   </div>
 </section>
 
@@ -317,10 +505,10 @@
 <!-- EXPERIENCE -->
 <section class="experience" id="experience">
   <p class="stag">// Where I've Been</p>
-  <h2>12 Years of<br>Enterprise Impact.</h2>
+  <h2>26 Years of<br>Enterprise Impact.</h2>
   <div class="exp-grid">
     <div class="exp-nav">
-      <div class="exp-tab active" data-t="e1">BankIslami &mdash; Lead</div>
+      <div class="exp-tab active" data-t="e1">BankIslami &mdash; Manager</div>
       <div class="exp-tab" data-t="e2">BankIslami &mdash; SP Admin</div>
       <div class="exp-tab" data-t="e3">Treehouse Consultancy</div>
       <div class="exp-tab" data-t="e4">ALJ Motors &middot; Toyota</div>
@@ -328,7 +516,7 @@
     </div>
     <div>
       <div class="exp-item active" id="e1">
-        <div class="exp-role">Lead &mdash; Data Automation Specialist</div>
+        <div class="exp-role">Manager &mdash; Data Automation & BI Specialist</div>
         <div class="exp-co">BankIslami Pakistan &middot; Karachi</div>
         <div class="exp-dt">Mar 2025 &mdash; Present</div>
         <ul class="exp-list">
@@ -388,12 +576,12 @@
   <p class="stag">// My Arsenal</p>
   <h2>Technical Stack</h2>
   <div class="pills">
-    <span class="pill hi">Power BI</span><span class="pill hi">DAX</span><span class="pill hi">SSIS</span><span class="pill hi">SQL Server</span>
-    <span class="pill">Python</span><span class="pill">Oracle</span><span class="pill">Sybase ASE</span><span class="pill">SQLite</span>
-    <span class="pill">Tableau</span><span class="pill hi">RLS</span><span class="pill">Dataflows</span><span class="pill">REST APIs</span>
-    <span class="pill">ODBC</span><span class="pill hi">Star Schema</span><span class="pill">Snowflake Schema</span><span class="pill hi">Data Warehousing</span>
-    <span class="pill">Data Profiling</span><span class="pill">SQL Agent</span><span class="pill">Power Automate</span><span class="pill">PowerApps</span>
-    <span class="pill">SharePoint</span><span class="pill">Visual Studio 2022</span><span class="pill">PowerShell</span><span class="pill">Windows Server</span>
+    <span class="pill hi">Power BI</span><span class="pill hi">DAX</span><span class="pill hi">RLS</span><span class="pill hi">SSIS</span>
+    <span class="pill hi">SQL Server</span><span class="pill hi">Data Warehousing</span><span class="pill">Power BI Report Server</span>
+    <span class="pill">ODBC</span><span class="pill">Sybase ASE</span><span class="pill">Power BI MCP Server</span><span class="pill">Claudi AI</span>
+    <span class="pill hi">Star Schema</span><span class="pill">Snowflake Schema</span><span class="pill">Dataflows</span><span class="pill">Python</span>
+    <span class="pill">Data Profiling</span><span class="pill">Power Automate</span><span class="pill">Power Apps</span><span class="pill">SharePoint</span>
+    <span class="pill">Visual Studio 2022 </span><span class="pill">Visual Studio Code </span><span class="pill">ChatGPT</span><span class="pill">Tableau</span>
   </div>
 </div>
 
@@ -505,13 +693,38 @@
 <!-- TOOLS -->
 <div class="tools">
   <div class="tool a">Power BI</div>
-  <div class="tool">SQL Server</div>
-  <div class="tool a">Tableau</div>
-  <div class="tool">SSIS</div>
-  <div class="tool a">Python</div>
-  <div class="tool">SharePoint</div>
-  <div class="tool a">Power Platform</div>
+  <div class="tool">DAX</div>
+  <div class="tool a">Power BI Report Server</div>
+  <div class="tool">SQL Server SSIS</div>
+  <div class="tool a">Power BI MCP Server</div>
+  <div class="tool">Claudi AI & ChatGPT</div>
+  <div class="tool a">Visual Studio Code</div>
+  <div class="tool">Tableau</div>
+  
 </div>
+
+<section class="case-study">
+  <p class="stag">// Featured Case Study</p>
+  <h2>AI + Power BI in Banking.</h2>
+
+  <div class="case-box">
+    <p>
+      Built an AI-powered analytics solution integrating <strong>Power BI, MCP Server, and SQL Server</strong> for retail banking.
+    </p>
+
+    <ul>
+      <li>✔ Automated ETL pipelines using SSIS handling millions of records</li>
+      <li>✔ Developed Power BI dashboards for ATM, EBS, and KPI monitoring</li>
+      <li>✔ Enabled natural language queries using AI (MCP + LLM)</li>
+      <li>✔ Reduced reporting effort by 60%</li>
+      <li>✔ Improved decision-making speed across business teams</li>
+    </ul>
+
+    <p class="impact">
+      🚀 Result: Transformed traditional reporting into an intelligent decision system.
+    </p>
+  </div>
+</section>
 
 <!-- CONTACT -->
 <section class="contact" id="contact">
@@ -575,7 +788,7 @@
 <!-- Floating Audio Player -->
 <!-- Audio -->
 <audio id="bgAudio" autoplay loop muted>
-  <source src="prettyjohn1-corporate-background-music-483403.mp3" type="audio/mpeg">
+  <source src="Crescent-Moon(chosic.com).mp3" type="audio/mpeg">
 </audio>
 
 <!-- Minimal Control -->
@@ -657,6 +870,37 @@ window.addEventListener('scroll', () => {
 window.addEventListener('load', () => {
   audio.play().catch(() => {});
 });
+</script>
+
+<script>
+function runAI() {
+  const input = document.getElementById("aiInput").value.toLowerCase();
+  let response = "";
+
+  if (input.includes("atm")) {
+    response = "📊 ATM Downtime (Last 7 Days):\n- Total Downtime: 42 hours\n- Most affected region: Karachi\n- Peak issue: Network failure\n\n💡 Recommendation: Investigate ISP redundancy.";
+  } 
+  else if (input.includes("sales")) {
+    response = "📈 Sales Performance:\n- Growth: +18%\n- Top Region: Lahore\n- Declining Segment: Retail Banking\n\n💡 Recommendation: Focus on digital channels.";
+  } 
+  else {
+    response = "🤖 AI Insight:\nYour query has been processed.\n\nThis demo simulates MCP + AI integration where natural language queries are converted into real-time insights from Power BI datasets.";
+  }
+
+  let i = 0;
+const speed = 20;
+const output = document.getElementById("aiOutput");
+output.innerText = "";
+
+function typeWriter() {
+  if (i < response.length) {
+    output.innerText += response.charAt(i);
+    i++;
+    setTimeout(typeWriter, speed);
+  }
+}
+typeWriter();
+}
 </script>
 </body>
 </html>
