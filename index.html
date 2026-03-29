@@ -803,7 +803,7 @@
      style="
         position:fixed;
         bottom:88px;
-        right:24px;
+        left:24px;
         width:52px;
         height:52px;
         border-radius:50%;
@@ -845,7 +845,7 @@
      style="
         position:fixed;
         bottom:24px;
-        right:24px;
+        left:24px;
         width:52px;
         height:52px;
         border-radius:50%;
@@ -870,50 +870,60 @@ const control = document.getElementById('audioControl');
 // Base settings
 audio.volume = 0.25;
 
-// Toggle mute
-function toggleMute() {
-  audio.muted = !audio.muted;
-  control.textContent = audio.muted ? '🔇' : '🔊';
-
-  if (!audio.muted && audio.paused) {
-    audio.play().catch(() => {});
-  }
-}
-
-// Smooth volume change function
+// Fade in audio smoothly from current volume
 function fadeInAudio() {
-  audio.volume = 0;
   let fade = setInterval(() => {
-    if (audio.volume < 0.3) {
-      audio.volume += 0.02;
+    if (audio.volume < 0.28) {
+      audio.volume = Math.min(0.3, audio.volume + 0.02);
     } else {
       clearInterval(fade);
     }
   }, 100);
 }
 
-function toggleMute() {
-  audio.muted = !audio.muted;
-  control.textContent = audio.muted ? '🔇' : '🔊';
+// Smooth volume transition to target
+function setVolumeSmooth(target) {
+  if (audio.muted) return;
+  let step = (target - audio.volume) / 20;
+  let count = 0;
+  let fade = setInterval(() => {
+    if (count >= 20) {
+      audio.volume = Math.min(1, Math.max(0, target));
+      clearInterval(fade);
+    } else {
+      audio.volume = Math.min(1, Math.max(0, audio.volume + step));
+      count++;
+    }
+  }, 50);
+}
 
-  if (!audio.muted) {
-    audio.play().catch(()=>{});
+// Toggle mute
+function toggleMute() {
+  if (audio.paused) {
+    audio.muted = false;
+    audio.volume = 0;
+    audio.play().catch(() => {});
     fadeInAudio();
+    control.textContent = '🔊';
+  } else if (!audio.muted) {
+    audio.muted = true;
+    control.textContent = '🔇';
+  } else {
+    audio.muted = false;
+    fadeInAudio();
+    control.textContent = '🔊';
   }
 }
 
-// Scroll-based intelligence (Power BI feel)
+// Scroll-based volume intelligence (Power BI feel)
 window.addEventListener('scroll', () => {
   let y = window.scrollY;
-
   if (y < 500) {
-    setVolumeSmooth(0.15); // Intro / Hero
-  } 
-  else if (y < 1200) {
-    setVolumeSmooth(0.25); // Dashboards
-  } 
-  else {
-    setVolumeSmooth(0.35); // AI / Advanced section
+    setVolumeSmooth(0.15);
+  } else if (y < 1200) {
+    setVolumeSmooth(0.25);
+  } else {
+    setVolumeSmooth(0.35);
   }
 });
 
