@@ -580,11 +580,12 @@
   <h2>Technical Stack</h2>
   <div class="pills">
     <span class="pill hi">Power BI</span><span class="pill hi">DAX</span><span class="pill hi">RLS</span><span class="pill hi">SSIS</span>
-    <span class="pill hi">SQL Server</span><span class="pill hi">Data Warehousing</span><span class="pill">Power BI Report Server</span>
-    <span class="pill">ODBC</span><span class="pill">Sybase ASE</span><span class="pill">Power BI MCP Server</span><span class="pill">Claudi AI</span>
-    <span class="pill hi">Star Schema</span><span class="pill">Snowflake Schema</span><span class="pill">Dataflows</span><span class="pill">Python</span>
-    <span class="pill">Data Profiling</span><span class="pill">Power Automate</span><span class="pill">Power Apps</span><span class="pill">SharePoint</span>
-    <span class="pill">Visual Studio 2022 </span><span class="pill">Visual Studio Code </span><span class="pill">ChatGPT</span><span class="pill">Tableau</span>
+    <span class="pill hi">SQL Server</span><span class="pill hi">Data Warehousing</span><span class="pill hi">Power BI Report Server</span>
+    <span class="pill">ODBC</span><span class="pill">Sybase ASE</span><span class="pill hi">Power BI MCP Server</span><span class="pill hi">Claudi AI</span>
+    <span class="pill">Star Schema</span><span class="pill">Snowflake Schema</span><span class="pill">Dataflows</span><span class="pill">Python</span>
+    <span class="pill">Data Profiling</span><span class="pill">Power Automate</span><span class="pill">Power Apps</span><span class="pill hi">SharePoint</span>
+    <span class="pill hi">Visual Studio 2022 </span><span class="pill hi">Visual Studio Code </span><span class="pill hi">ChatGPT</span><span class="pill">Tableau</span>
+    <span class="pill">HTML5</span><span class="pill">CSS3</span><span class="pill hi">Figma</span><span class="pill">Webflow</span>
   </div>
 </div>
 
@@ -796,6 +797,48 @@
   <source src="Crescent-Moon(chosic.com).mp3" type="audio/mpeg">
 </audio>
 
+<!-- Go to Top Button -->
+<div id="goTopBtn"
+     onclick="window.scrollTo({top:0, behavior:'smooth'})"
+     style="
+        position:fixed;
+        bottom:88px;
+        right:24px;
+        width:52px;
+        height:52px;
+        border-radius:50%;
+        background:#C93A08;
+        display:none;
+        align-items:center;
+        justify-content:center;
+        cursor:pointer;
+        font-size:22px;
+        line-height:1;
+        color:#fff;
+        box-shadow:0 4px 15px rgba(201,58,8,0.4);
+        z-index:9999;
+        transition:opacity 0.3s, transform 0.3s;
+        opacity:0;
+        -webkit-tap-highlight-color:transparent;"
+     title="Go to top">
+  &#8679;
+</div>
+
+<script>
+  const goTopBtn = document.getElementById('goTopBtn');
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 400) {
+      goTopBtn.style.display = 'flex';
+      setTimeout(() => goTopBtn.style.opacity = '1', 10);
+      goTopBtn.style.transform = 'translateY(0)';
+    } else {
+      goTopBtn.style.opacity = '0';
+      goTopBtn.style.transform = 'translateY(10px)';
+      setTimeout(() => { if (window.scrollY <= 400) goTopBtn.style.display = 'none'; }, 300);
+    }
+  });
+</script>
+
 <!-- Minimal Control -->
 <div id="audioControl"
      onclick="toggleMute()"
@@ -803,17 +846,20 @@
         position:fixed;
         bottom:24px;
         right:24px;
-        width:44px;
-        height:44px;
+        width:52px;
+        height:52px;
         border-radius:50%;
         background:#f5f7fb;
         display:flex;
         align-items:center;
         justify-content:center;
         cursor:pointer;
-        font-size:18px;
+        font-size:22px;
+        line-height:1;
+        overflow:visible;
         box-shadow:0 4px 15px rgba(0,0,0,0.1);
-        z-index:9999;">
+        z-index:9999;
+        -webkit-tap-highlight-color:transparent;">
   🔇
 </div>
 
