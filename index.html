@@ -5,8 +5,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <!-- ── PRIMARY SEO ── -->
-<title>Syed Najamuddin | Senior Power BI & Data Analytics Specialist — Karachi</title>
-<meta name="description" content="Syed Najamuddin — Senior Data & BI Specialist with 12+ years experience in Power BI, SSIS, SQL Server, ETL pipelines and Data Warehousing. Based in Karachi, Pakistan.">
+<title>Syed Najamuddin | SharePoint & Power BI Consultant — Karachi</title>
+<meta name="description" content="Syed Najamuddin — Senior SharePoint & Power BI Consultant with 26+ years of IT experience across SharePoint, Power BI, Power BI Report Server, Power Platform, SQL Server and enterprise BI.">
 <meta name="keywords" content="Power BI Developer, Data Analyst, BI Specialist, SSIS, SQL Server, ETL, Data Warehousing, DAX, Power Platform, SharePoint, Karachi, Pakistan, Tableau, Dashboard Developer">
 <meta name="author" content="Syed Najamuddin">
 <meta name="robots" content="index, follow">
@@ -226,6 +226,26 @@
   @keyframes fadeUp { from{opacity:0;transform:translateY(24px)} to{opacity:1;transform:translateY(0)} }
   @keyframes fadeIn { from{opacity:0} to{opacity:1} }
 
+
+  /* PROFILE PHOTO — selected from supplied photos */
+  .hero-content-wrap { position:relative; z-index:1; display:flex; align-items:flex-end; justify-content:space-between; gap:3rem; width:100%; }
+  .hero-copy { max-width:760px; }
+  .hero-photo-wrap { position:relative; width:min(34vw,430px); min-width:280px; display:flex; justify-content:center; align-items:flex-end; align-self:stretch; }
+  .hero-photo { width:100%; height:clamp(430px,62vh,700px); object-fit:contain; object-position:center bottom; border:0; box-shadow:none; background:transparent; filter:none; }
+  .hero-photo-label { position:absolute; right:1.5rem; bottom:1.5rem; background:rgba(14,11,9,.78); border:1px solid rgba(201,58,8,.45); backdrop-filter:blur(8px); padding:.55rem .8rem; font-family:var(--mono); font-size:.65rem; color:rgba(255,255,255,.8); letter-spacing:.08em; text-transform:uppercase; }
+  @media(max-width:900px){
+    .hero-content-wrap{flex-direction:column; align-items:flex-start; justify-content:flex-end; gap:1.5rem;}
+    .hero-photo-wrap{position:absolute; right:1.5rem; top:6rem; width:250px; min-width:0; height:360px; opacity:.82;}
+    .hero-photo{height:360px;}
+    .hero-copy{max-width:650px; padding-right:7rem;}
+  }
+  @media(max-width:600px){
+    .hero-photo-wrap{width:170px; height:250px; top:5.2rem; right:1rem; opacity:.72;}
+    .hero-photo{height:250px;}
+    .hero-copy{padding-right:4.5rem;}
+    .hero h1{font-size:clamp(3.2rem,14vw,5.5rem);}
+  }
+
   /* RESPONSIVE */
   @media(max-width:900px){
     nav{padding:1rem 1.5rem;} nav ul{gap:1.2rem;}
@@ -410,13 +430,24 @@
 <section class="hero" id="home">
   <div class="hero-bg"></div>
   <div class="hero-grid"></div>
-  <p class="hero-tag">Senior Data &amp; BI Specialist &middot; Karachi, PK &middot; 26+ Years</p>
-  <h1>Turning Raw<br>Data Into<br><em>Decisions.</em></h1>
-  <p class="hero-sub">I build enterprise Power BI dashboards, SSIS pipelines, and SQL Server data warehouses that help organisations stop guessing and start knowing.</p>
-  <div class="hero-cta">
-    <a href="#work" class="btn-p">View My Work</a>
-    <a href="#contact" class="btn-s">Let's Talk</a>
+
+  <div class="hero-content-wrap">
+    <div class="hero-copy">
+      <p class="hero-tag">Senior SharePoint &amp; Power BI Consultant &middot; Karachi, PK &middot; 26+ Years</p>
+      <h1>Data.<br>BI.<br><em>Impact.</em></h1>
+      <p class="hero-sub">I help organisations build and support enterprise SharePoint, Power BI, Power BI Report Server, and data automation solutions across on-premise and cloud environments.</p>
+      <div class="hero-cta">
+        <a href="#work" class="btn-p">View My Work</a>
+        <a href="#contact" class="btn-s">Let's Talk</a>
+      </div>
+    </div>
+
+    <div class="hero-photo-wrap">
+      <img class="hero-photo" src="syed-najamuddin-profile.png" alt="Syed Najamuddin — Senior SharePoint & Power BI Consultant">
+      <div class="hero-photo-label">SharePoint · Power BI · M365</div>
+    </div>
   </div>
+
   <div class="hero-scroll">Scroll</div>
 </section>
 
@@ -449,7 +480,7 @@
       <div class="skill-row"><div class="skill-hd"><span>Power BI Report Server</span><span>95%</span></div><div class="skill-bar"><div class="skill-fill" data-w="85"></div></div></div>
       <div class="skill-row"><div class="skill-hd"><span>Power MCP Server</span><span>65%</span></div><div class="skill-bar"><div class="skill-fill" data-w="85"></div></div></div>
       <div class="skill-row"><div class="skill-hd"><span>Claude AI &amp; ChatGPT</span><span>85%</span></div><div class="skill-bar"><div class="skill-fill" data-w="85"></div></div></div>
-      <div class="skill-row"><div class="skill-hd"><span>SharePoint &amp; Power Platform </span><span>55%</span></div><div class="skill-bar"><div class="skill-fill" data-w="85"></div></div></div>
+      <div class="skill-row"><div class="skill-hd"><span>SharePoint &amp; Power Platform </span><span>85%</span></div><div class="skill-bar"><div class="skill-fill" data-w="85"></div></div></div>
     </div>
   </div>
 </section>
