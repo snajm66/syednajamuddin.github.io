@@ -2,144 +2,77 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Syed Najamuddin — Senior SharePoint & Power BI Consultant</title>
-<meta name="description" content="Syed Najamuddin — Senior SharePoint & Power BI Consultant with 26+ years of IT experience.">
-<style>
-:root{--black:#070707;--panel:#101010;--orange:#ff3b16;--orange2:#e82d0c;--cream:#f5f1ea;--text:#f7f7f7;--muted:#bcbcbc;--line:#333}
-*{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth}
-body{font-family:Arial,Helvetica,sans-serif;background:var(--black);color:var(--text);line-height:1.5}
-a{text-decoration:none;color:inherit}
-.container{width:min(1200px,92%);margin:auto}
-.nav{height:74px;background:#050505;border-bottom:1px solid #222;display:flex;align-items:center;position:sticky;top:0;z-index:20}
-.nav .container{display:flex;align-items:center;justify-content:space-between;gap:25px}
-.brand{font-weight:900;letter-spacing:.5px;font-size:23px}.brand span{color:var(--orange)}
-.tag{font-size:8px;letter-spacing:4px;color:#ddd;display:block;margin-top:-2px}
-.links{display:flex;gap:30px;font-size:13px}.links a{padding:27px 0}.links a:hover,.links a.active{color:var(--orange);border-bottom:2px solid var(--orange)}
-.btn{display:inline-flex;align-items:center;justify-content:center;padding:14px 23px;border-radius:7px;font-weight:700;border:1px solid var(--orange);transition:.2s}.btn.primary{background:var(--orange);color:#fff}.btn:hover{transform:translateY(-2px)}
-.hero{min-height:650px;background:#08090b;position:relative;overflow:hidden}
-.hero:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(4,6,9,.98) 0%,rgba(5,7,10,.93) 42%,rgba(5,7,10,.18) 68%,rgba(15,7,5,.05) 100%);pointer-events:none}
-.hero-grid{display:grid;grid-template-columns:1.12fr .88fr;min-height:650px;align-items:center;position:relative}
-.eyebrow,.section-kicker{color:#ff694b;font-size:11px;letter-spacing:2px;text-transform:uppercase;font-weight:700}
-.hero h1{font-size:clamp(52px,5.6vw,86px);line-height:.95;margin:15px 0 12px;font-weight:900;letter-spacing:-3px}.hero h1 span{color:var(--orange)}
-.hero h2{font-size:30px;margin-bottom:12px}.hero .lead{font-size:18px;color:#ddd;max-width:650px}
-.techline{margin:23px 0;font-size:14px;display:flex;gap:12px;flex-wrap:wrap}.techline span+span{border-left:1px solid #777;padding-left:12px}
-.hero-copy p{max-width:600px;color:#ddd}
-.ctas{display:flex;gap:14px;margin:28px 0}.btn.outline{background:transparent}
-.stats{display:flex;gap:0;margin-top:10px}.stat{padding:0 30px 0 0;margin-right:25px;border-right:1px solid #333}.stat:last-child{border:0}.stat b{font-size:31px;color:var(--orange);display:block}.stat small{color:#bbb}
-.portrait-wrap{height:650px;display:flex;align-items:flex-end;justify-content:center;position:relative;background-image:url("assets/hero-right-reference.jpg");background-size:cover;background-position:center top;margin-right:-1px}
-.portrait{width:min(100%,610px);height:auto;max-height:640px;object-fit:contain;object-position:center bottom;position:relative;z-index:3;filter:contrast(1.02) saturate(.98);mix-blend-mode:normal}
-.side-msg{position:absolute;right:20px;z-index:5;top:110px;letter-spacing:3px;font-size:15px;line-height:2.1;color:#ddd;text-align:left}.side-msg b{display:block;color:#fff}.side-msg:after{content:"";display:block;width:55px;border-top:3px solid var(--orange);margin-top:12px}
-.avail{position:absolute;right:12px;z-index:5;bottom:100px;width:145px;text-align:center;font-size:11px;color:#eee}.avail:after{content:"";display:block;width:45px;border-top:3px solid var(--orange);margin:12px auto}
-.services{background:#080909;border:1px solid #333;border-radius:12px;position:relative;margin:-55px auto 0;padding:20px;display:grid;grid-template-columns:repeat(6,1fr);gap:10px;z-index:3}.service{border-right:1px solid #333;padding:0 18px}.service:last-child{border:0}.icon{font-size:30px;color:var(--orange);font-weight:900}.service b{display:block;font-size:14px}.service small{color:#aaa;font-size:10px}
-.light{background:var(--cream);color:#161616;padding:80px 0}.about-grid{display:grid;grid-template-columns:1fr 1.15fr;gap:80px;align-items:center}.light h3{font-size:52px;line-height:.9;margin:14px 0 25px}.light h3 span{color:var(--orange)}.light p{color:#555;margin-bottom:16px;max-width:520px}.more{color:var(--orange);font-weight:800}
-.skill{margin:15px 0}.skill-top{display:flex;justify-content:space-between;font-size:13px}.bar{height:5px;background:#ddd;margin-top:5px}.bar i{display:block;height:100%;background:var(--orange)}
-.dark-section{background:#090909;padding:70px 0}.section-title{font-size:42px;line-height:.95;margin:10px 0 30px}.section-title span{color:var(--orange)}.intro{color:#bbb;max-width:540px;margin-bottom:25px}
-.cards{display:grid;grid-template-columns:1fr 1fr;gap:10px}.card{background:#111;border:1px solid #222;border-radius:6px;padding:25px}.card .bigicon{font-size:34px;color:var(--orange);margin-bottom:10px}.card h4{font-size:15px}.card p{color:#aaa;font-size:13px;margin:8px 0 15px}.arrow{color:var(--orange);font-weight:700;font-size:12px}
-.projects{background:var(--cream);color:#111;padding:70px 0}.project-head{display:flex;justify-content:space-between;align-items:end;margin-bottom:25px}.project-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}.project{background:#fff;border-radius:5px;overflow:hidden;box-shadow:0 2px 10px #ddd}.project img{width:100%;height:145px;object-fit:cover}.project div{padding:12px}.project b{font-size:13px}.project small{display:block;color:#777;margin-top:4px}
-.youtube{background:#090909;padding:60px 0}.yt-grid{display:grid;grid-template-columns:1fr 1.7fr;gap:35px;align-items:center}.yt-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}.yt-card img{width:100%;aspect-ratio:16/9;object-fit:contain;background:#050505;border:1px solid #333;border-radius:4px}.yt-card p{font-size:11px;margin-top:6px}
-.contact{background:linear-gradient(110deg,#f02f0d,#b8270c);padding:60px 0}.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:45px}.contact h3{font-size:55px;line-height:.9;margin-bottom:15px}.contact p{color:#fff}.contact ul{list-style:none;margin-top:20px;line-height:2;color:#fff}.form{display:grid;gap:10px}.form input,.form textarea{width:100%;padding:13px;border:1px solid rgba(255,255,255,.4);background:rgba(0,0,0,.28);color:#fff;border-radius:5px;font-size:14px;caret-color:#fff}
-.form input::placeholder,.form textarea::placeholder{color:#fff;opacity:1}
-.form input:focus,.form textarea:focus{outline:none;border-color:#f2c811;box-shadow:0 0 0 2px rgba(242,200,17,.18)}.form textarea{min-height:100px}.form button{background:#050505;color:#fff;border:0;padding:13px;border-radius:5px;font-weight:700}
-footer{background:#050505;padding:25px 0;color:#aaa;font-size:11px}.footer-row{display:flex;justify-content:space-between;gap:20px}
-@media(max-width:900px){.links{display:none}.hero-grid,.about-grid,.contact-grid,.yt-grid{grid-template-columns:1fr}.hero{padding:55px 0 0}.hero-grid{min-height:auto}.hero h1{font-size:56px}.portrait-wrap{min-height:520px;height:520px}.side-msg{right:10px}.services{grid-template-columns:repeat(3,1fr);margin:0 auto}.service{border-bottom:1px solid #333}.project-grid{grid-template-columns:repeat(2,1fr)}}
-@media(max-width:600px){.hero h1{font-size:45px}.hero h2{font-size:22px}.stats{flex-wrap:wrap;gap:15px}.stat{margin:0;padding-right:15px}.services{grid-template-columns:1fr 1fr}.cards,.project-grid,.yt-cards{grid-template-columns:1fr}.light h3,.contact h3{font-size:42px}.side-msg{display:none}.avail{right:12px;bottom:30px}}
-</style>
-
-<style id="reference-hero-fix">
-@media (min-width:901px){
-  .hero{min-height:650px}
-  .hero-grid{display:block;min-height:650px;position:relative}
-  .hero-copy{position:relative;z-index:4;width:62%;padding-top:72px}
-  .hero h1{font-size:clamp(64px,5.8vw,88px);white-space:nowrap;letter-spacing:-3px}
-  .hero h2{font-size:30px;white-space:nowrap}
-  .hero .lead{font-size:18px}
-  .portrait-wrap{position:absolute;right:-3%;top:0;bottom:0;width:52%;height:650px;z-index:2;padding:0;display:flex;align-items:flex-end;justify-content:center}
-  .portrait{width:100%;height:620px;max-height:none;object-fit:contain;object-position:center bottom;mix-blend-mode:normal;filter:drop-shadow(0 18px 30px rgba(0,0,0,.45));position:relative;z-index:3}
-  .portrait-wrap:before{content:"";position:absolute;width:520px;height:520px;border:2px solid rgba(255,59,22,.55);border-radius:50%;right:40px;top:80px;z-index:1}
-  .side-msg{right:0;top:105px;z-index:5}
-  .avail{right:0;bottom:95px;z-index:5}
-  .services{margin-top:-55px;z-index:8}
-}
-@media (max-width:900px){
-  .hero h1{white-space:normal}
-  .portrait{mix-blend-mode:normal;object-fit:contain;background:transparent;filter:drop-shadow(0 12px 24px rgba(0,0,0,.4))}
-}
-</style>
-
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Syed Najamuddin — Hero</title>
+<link rel="stylesheet" href="hero.css">
 </head>
 <body>
-<header class="nav"><div class="container">
-<a class="brand" href="#">SYED <span>NAJAMUDDIN</span><small class="tag">CONSULT · BUILD · EMPOWER</small></a>
-<nav class="links"><a class="active" href="#home">Home</a><a href="#about">About</a><a href="#expertise">Expertise</a><a href="#services">Services</a><a href="#projects">Projects</a><a href="#youtube">YouTube</a><a href="#experience">Experience</a><a href="#contact">Contact</a></nav>
-<a class="btn primary" href="#contact">✈ Let's Talk</a>
-</div></header>
+<header class="site-nav">
+  <a class="brand" href="#home" aria-label="Syed Najamuddin home">
+    <img src="assets/logo-reference.png" alt="Syed Najamuddin — Consult · Build · Empower">
+  </a>
+  <nav>
+    <a class="active" href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#expertise">Expertise</a>
+    <a href="#services">Services</a>
+    <a href="#projects">Projects</a>
+    <a href="#youtube">YouTube</a>
+    <a href="#experience">Experience</a>
+    <a href="#contact">Contact</a>
+  </nav>
+  <a class="talk" href="#contact">➤ &nbsp; Let's Talk</a>
+</header>
 
 <main>
-<section class="hero" id="home"><div class="container hero-grid">
-<div class="hero-copy">
-<div class="eyebrow">Enterprise Solutions | Data-Driven Decisions | Real Business Impact</div>
-<h1>Syed <span>Najamuddin</span></h1>
-<h2>Senior SharePoint &amp; Power BI Consultant</h2>
-<div class="lead">Transforming data, people and processes with Microsoft technologies</div>
-<div class="techline"><span>SharePoint</span><span>Power BI</span><span>Power BI Report Server</span><span>Microsoft 365</span><span>Power Platform</span></div>
-<p>26+ years of IT experience delivering enterprise solutions in SharePoint, Power BI, Power Platform and data automation for banking, finance and corporate sectors.</p>
-<div class="ctas"><a class="btn primary" href="#contact">⇩ &nbsp; Download Resume</a><a class="btn outline" href="#contact">✉ &nbsp; Contact Me</a></div>
-<div class="stats"><div class="stat"><b>26+</b><small>Years Experience</small></div><div class="stat"><b>11+</b><small>Years in BI</small></div><div class="stat"><b>50+</b><small>Projects Delivered</small></div><div class="stat"><b>100%</b><small>Client Focused</small></div></div>
-</div>
-<div class="portrait-wrap"><img class="portrait" src="assets/syed-najamuddin-profile.png" alt="Syed Najamuddin portrait"><div class="side-msg"><b>INSIGHTS</b>AUTOMATION<br>BETTER<br>DECISIONS</div><div class="avail">Available for<br>Saudi Arabia &amp; GCC<br>Consulting Projects</div></div>
-</div></section>
+<section class="hero" id="home">
+  <div class="hero-art" aria-hidden="true"></div>
 
-<div class="container services" id="expertise">
-<div class="service"><div class="icon">S</div><b>SharePoint</b><small>Online &amp; On-Premises</small></div>
-<div class="service"><div class="icon">▥</div><b>Power BI</b><small>Data Analytics &amp; DAX</small></div>
-<div class="service"><div class="icon">▤</div><b>Power BI Report Server</b><small>Enterprise BI</small></div>
-<div class="service"><div class="icon">◆</div><b>Power Platform</b><small>Power Automate &amp; Power Apps</small></div>
-<div class="service"><div class="icon">◉</div><b>SQL Server</b><small>SSIS &amp; Data Warehousing</small></div>
-<div class="service"><div class="icon">☁</div><b>Microsoft 365</b><small>Collaboration &amp; Productivity</small></div>
-</div>
+  <div class="hero-content">
+    <div class="eyebrow">ENTERPRISE SOLUTIONS | DATA-DRIVEN DECISIONS | REAL BUSINESS IMPACT</div>
 
-<section class="light" id="about"><div class="container about-grid">
-<div><div class="section-kicker">— About Me</div><h3>I DESIGN YOUR<br><span>SUCCESS.</span></h3>
-<p>I am Syed Najamuddin, a Senior SharePoint &amp; Power BI Consultant with 26+ years of IT experience, helping organizations turn data into meaningful insights and build efficient, automated and scalable solutions using Microsoft technologies.</p>
-<p>My focus is to simplify complex business challenges through data, automation and collaboration — enabling better decisions and real business impact.</p><a class="more" href="#experience">MORE ABOUT ME &nbsp; →</a></div>
-<div>
-<div class="skill"><div class="skill-top"><span>Power BI &amp; DAX</span><b>95%</b></div><div class="bar"><i style="width:95%"></i></div></div>
-<div class="skill"><div class="skill-top"><span>SharePoint (On-Prem &amp; Online)</span><b>90%</b></div><div class="bar"><i style="width:90%"></i></div></div>
-<div class="skill"><div class="skill-top"><span>Power Platform (Automate &amp; Apps)</span><b>85%</b></div><div class="bar"><i style="width:85%"></i></div></div>
-<div class="skill"><div class="skill-top"><span>SQL Server &amp; SSIS</span><b>80%</b></div><div class="bar"><i style="width:80%"></i></div></div>
-<div class="skill"><div class="skill-top"><span>Data Modeling &amp; Analytics</span><b>85%</b></div><div class="bar"><i style="width:85%"></i></div></div>
-<div class="skill"><div class="skill-top"><span>Business Process Automation</span><b>80%</b></div><div class="bar"><i style="width:80%"></i></div></div>
-<div class="skill"><div class="skill-top"><span>Training &amp; Knowledge Sharing</span><b>90%</b></div><div class="bar"><i style="width:90%"></i></div></div>
-<div class="skill"><div class="skill-top"><span>Consulting &amp; Solution Design</span><b>85%</b></div><div class="bar"><i style="width:85%"></i></div></div>
-</div></div></section>
+    <h1><span>Syed</span> <strong>Najamuddin</strong></h1>
 
-<section class="dark-section" id="services"><div class="container">
-<div class="section-kicker">— What I Do</div><div class="yt-grid"><div><h3 class="section-title">NEXT-GEN BI WITH<br><span>AI &amp; AUTOMATION.</span></h3></div><p class="intro">I help organizations unlock the true value of their data using modern BI, automation and AI-driven solutions — from data engineering to interactive dashboards and enterprise reporting.</p></div>
-<div class="cards">
-<div class="card"><div class="bigicon">▣</div><h4>PORTFOLIO DASHBOARDS</h4><p>Interactive Power BI dashboards for finance, banking and corporate sectors.</p><a class="arrow" href="#projects">VIEW PROJECTS →</a></div>
-<div class="card"><div class="bigicon">⚙</div><h4>AUTOMATION &amp; APPS</h4><p>Power Automate and Power Apps solutions to streamline business processes.</p><a class="arrow" href="#contact">EXPLORE SERVICES →</a></div>
-<div class="card"><div class="bigicon">▤</div><h4>ENTERPRISE BI SOLUTIONS</h4><p>Power BI Report Server, data warehousing and advanced analytics.</p><a class="arrow" href="#contact">LEARN MORE →</a></div>
-<div class="card"><div class="bigicon">♟</div><h4>TRAINING &amp; CONSULTING</h4><p>Hands-on training and consulting for individuals and organizations.</p><a class="arrow" href="#contact">GET IN TOUCH →</a></div>
-</div></div></section>
+    <h2>Senior SharePoint &amp; Power BI Consultant</h2>
 
-<section class="projects" id="projects"><div class="container"><div class="project-head"><div><div class="section-kicker">— Featured Projects</div><h3 class="section-title">POWER BI &amp; TABLEAU<br>DASHBOARD <span>GALLERY.</span></h3><p>Real-world dashboards and reports for banking, finance and corporate sectors.</p></div><a class="btn outline" href="#contact">View All Projects →</a></div>
-<div class="project-grid">
-<div class="project"><img src="project-1.jpg"><div><b>Management Dashboard</b><small>Executive analytics and KPIs</small></div></div>
-<div class="project"><img src="project-2.jpg"><div><b>Financial Performance</b><small>Revenue, cost and profitability</small></div></div>
-<div class="project"><img src="project-3.jpg"><div><b>Operations Dashboard</b><small>End-to-end operational insights</small></div></div>
+    <p class="lead">Transforming data, people and processes with Microsoft technologies</p>
 
-</div></div></section>
+    <div class="techline">
+      <span>SharePoint</span>
+      <span>Power BI</span>
+      <span>Power BI Report Server</span>
+      <span>Microsoft 365</span>
+      <span>Power Platform</span>
+    </div>
 
-<section class="youtube" id="youtube"><div class="container yt-grid"><div><div class="section-kicker">— YouTube Channel</div><h3 class="section-title">POWER BI <span>TALK</span></h3><p class="intro">Step-by-step tutorials on Power BI, Power BI Report Server, DAX, and enterprise BI solutions in Urdu for the corporate sector.</p><a class="btn primary" href="#">▶ Visit YouTube Channel →</a></div><div class="yt-cards">
-<div class="yt-card"><img src="assets/youtube-1.jpg"><p>Power BI Report Server Complete Guide</p></div>
-<div class="yt-card"><img src="assets/youtube-2.jpg"><p>DAX SAMEPERIODLASTYEAR Explained</p></div>
-<div class="yt-card"><img src="assets/youtube-3.jpg"><p>Power BI vs PBIRS Key Differences</p></div>
-</div></div></section>
+    <p class="summary">
+      26+ years of IT experience delivering enterprise solutions in SharePoint,
+      Power BI, Power Platform and data automation for banking, finance and
+      corporate sectors.
+    </p>
 
-<section class="contact" id="contact"><div class="container contact-grid"><div><h3>LET'S TALK.</h3><p>Have a project in mind or just want to say hello? I'm always open to new opportunities.</p><ul><li>⌖ Karachi, Pakistan</li><li>⌖ Available for Saudi Arabia &amp; GCC</li><li>✉ syed.najamuddin@gmail.com</li></ul></div><form class="form" onsubmit="event.preventDefault();alert('Thank you. Please connect by email or WhatsApp.');"><input placeholder="Name" required><input type="email" placeholder="Email" required><input placeholder="Subject"><textarea placeholder="Your Message"></textarea><button type="submit">✈ Send Message</button></form></div></section>
+    <div class="actions">
+      <a class="btn primary" href="#contact">⇩ &nbsp; Download Resume</a>
+      <a class="btn outline" href="#contact">✉ &nbsp; Contact Me</a>
+    </div>
+
+    <div class="stats">
+      <div><b>26+</b><small>Years Experience</small></div>
+      <div><b>11+</b><small>Years in BI</small></div>
+      <div><b>50+</b><small>Projects Delivered</small></div>
+      <div><b>100%</b><small>Client Focused</small></div>
+    </div>
+  </div>
+
+  <div class="service-strip">
+    <article><i>◆</i><div><b>SharePoint</b><small>Online &amp; On-Premises</small></div></article>
+    <article><i>▥</i><div><b>Power BI</b><small>Data Analytics &amp; DAX</small></div></article>
+    <article><i>▤</i><div><b>Power BI Report Server</b><small>Enterprise BI</small></div></article>
+    <article><i>◆</i><div><b>Power Platform</b><small>Power Automate &amp; Power Apps</small></div></article>
+    <article><i>◎</i><div><b>SQL Server</b><small>SSIS &amp; Data Warehousing</small></div></article>
+    <article><i>☁</i><div><b>Microsoft 365</b><small>Collaboration &amp; Productivity</small></div></article>
+  </div>
+</section>
 </main>
-<footer><div class="container footer-row"><div><strong>SYED <span style="color:#ff3b16">NAJAMUDDIN</span></strong><div class="tag">CONSULT · BUILD · EMPOWER</div></div><div>© 2026 Syed Najamuddin. All rights reserved.</div><div>Turning Data into Real Business Impact.</div></div></footer>
 </body>
 </html>
